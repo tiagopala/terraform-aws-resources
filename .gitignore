@@ -33,6 +33,7 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-terraformKP
-terraformKP.pub
+terraform-kp
+terraform-kp.pub
 .terraform.lock.hcl
+terraform-kp.pem
