@@ -16,4 +16,5 @@ provider "aws" { // Default Provider
 provider "aws" { // Specific Provider
   alias  = "us-east-1"
   region = "us-east-1"
+  
 }
