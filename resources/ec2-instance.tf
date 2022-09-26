@@ -3,7 +3,7 @@ resource "aws_instance" "dev" {
   count                  = 1
   ami                    = var.amis["sa-east-1"]
   instance_type          = "t2.micro"
-  key_name               = "terraform-kp"
+  key_name               = var.key_pair
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
   tags = {
     "Name" = "dev-${count.index}"
@@ -18,7 +18,7 @@ resource "aws_instance" "dev_us-east-1" {
   count                  = 1
   ami                    = var.amis["us-east-1"]
   instance_type          = "t2.micro"
-  key_name               = "terraform-kp"
+  key_name               = var.key_pair
   vpc_security_group_ids = [aws_security_group.allow_ssh_us-east-1.id]
   tags = {
     "Name" = "dev-${count.index}"
